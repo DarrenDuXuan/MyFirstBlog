@@ -13,6 +13,13 @@ def blog_main_list(request):
 
 def blog_detail(request, id):
     article = ArticlePost.objects.get(id=id)
+
+    article.body = markdown.markdown(article.body,
+                                     extensions=[
+                                         'markdown.extensions.extra',
+                                         'markdown.extensions.codehilite',
+                                         'markdown.extensions.toc',
+                                     ])
+    print(article.body)
     context = {'article':article}
-    print(sys.version)
     return render(request, 'article/detail.html', context)
