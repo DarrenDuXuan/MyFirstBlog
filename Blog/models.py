@@ -10,7 +10,7 @@ class ArticlePost(models.Model):
 
     body = models.TextField()
 
-    created = models.DateTimeField(default=timezone.now())
+    created = models.DateTimeField(default=timezone.now)
 
     update = models.DateTimeField(auto_now=True)
 

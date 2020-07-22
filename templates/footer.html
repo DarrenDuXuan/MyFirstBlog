@@ -1,29 +1,14 @@
 
-{% load staticfiles %}
+{% load static %}
 
-<html lang="zh-cn">
+<div>
+    <br><br><br>
+</div>
 
-<head>
-    <meta charset="utf-8">
-
-    <title>{% block title %}{% endblock %}</title>
-
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-
-</head>>
-
-<body>
-
-{% include 'header.html' %}
-
-{% block content %} {% endblock content %}
-
-{% include 'footer.html' %}
-
-<script src="{% static 'jquery/jquery-3.5.1.js' %}"></script>>
-<script src="{% static 'popper/popper.js' %}"></script>>
-<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>>
-
-</body>
-
-</html>>
+<footer class="py-3 bg-dark fixed-bottom">
+    <div class="container">
+        <p class="m-0 text-center text-white">
+            Copyright &copy;www.darrencat.com 2020
+        </p>
+    </div>
+</footer>
